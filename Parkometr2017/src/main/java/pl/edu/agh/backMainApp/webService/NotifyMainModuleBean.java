@@ -3,8 +3,8 @@ package pl.edu.agh.backMainApp.webService;
 import pl.edu.agh.backMainApp.model.Parking;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
-import java.awt.geom.Area;
 
 /**
  * Created by Michał Piotrowski on 2017-09-05.
@@ -19,17 +19,27 @@ public class NotifyMainModuleBean implements NotifyMainModule {
     }
 
     @WebMethod
-    public void notifyOccupySpot(String AreaId, String SpotId) {
-        parkingState.occupySpot(AreaId, SpotId);
+    public String notifyOccupySpot(@WebParam(name = "AreaId") String AreaId, @WebParam(name = "SpotId") String SpotId) {
+        return parkingState.occupySpot(AreaId, SpotId);
     }
 
     @WebMethod
-    public void notifyaddSpot(String AreaId, String SpotId) {
-        parkingState.addSpot(AreaId, SpotId);
+    public String notifyaddSpot(@WebParam(name = "AreaId") String AreaId, @WebParam(name = "SpotId") String SpotId) {
+        return parkingState.addSpot(AreaId, SpotId);
     }
 
     @WebMethod
-    public void notifyRemoveSpot(String AreaId, String SpotId) {
-        parkingState.removeSpot(AreaId, SpotId);
+    public String notifyRemoveSpot(@WebParam(name = "AreaId") String AreaId, @WebParam(name = "SpotId") String SpotId) {
+        return parkingState.removeSpot(AreaId, SpotId);
+    }
+
+    @WebMethod
+    public String notifyVacateSpot(@WebParam(name = "AreaId") String AreaId, @WebParam(name = "SpotId") String SpotId) {
+        return parkingState.vacateSpot(AreaId, SpotId);
+    }
+
+    @WebMethod
+    public String notifyPrintSpots() {
+        return parkingState.printSpots();
     }
 }

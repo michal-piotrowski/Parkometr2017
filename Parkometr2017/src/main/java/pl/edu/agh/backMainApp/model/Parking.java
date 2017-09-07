@@ -21,9 +21,8 @@ public class Parking {
         parkingState.put("B04", false);
     }
 
-    public String toString() {
+    public String printSpots() {
         StringBuilder sb = new StringBuilder();
-
         char prevFirstLetter = '~';
         for (Map.Entry<String, Boolean> entry : parkingState.entrySet()) {
             if (!(entry.getKey().charAt(0) == prevFirstLetter))
@@ -31,54 +30,74 @@ public class Parking {
             prevFirstLetter = entry.getKey().charAt(0);
             sb.append(entry.getKey() + ": " + (entry.getValue() ? "occupied\n" : "vacant\n"));
         }
+
         return sb.toString();
     }
 
-    public void addSpot(String AreaId, String SpotId) {
+    public String addSpot(String AreaId, String SpotId) {
         String newSpot = AreaId.concat(SpotId);
+        String response;
         if (parkingState.containsKey(newSpot))
-            System.out.println("Spot already exists");
+            response = "Spot already exists";
         else {
-            System.out.println("Spot " + SpotId + " in area: " + AreaId + " has been successfully created");
+            response = "Spot " + SpotId + " in area: " + AreaId + " has been successfully created";
             parkingState.put(newSpot, false);
         }
+        return response;
     }
 
-    public void removeSpot(String AreaId, String SpotId) {
-        if (!parkingState.containsKey(AreaId.concat(SpotId)))
-            System.out.println("Spot not found therefore not removed");
+    public String removeSpot(String AreaId, String SpotId) {
+        String spotToRemove = AreaId.concat(SpotId);
+        String response;
+        if (!parkingState.containsKey(spotToRemove))
+            response = "Spot " + spotToRemove + " has not been found";
         else {
-            parkingState.remove(AreaId.concat(SpotId));
-            System.out.println("removing " + AreaId.concat(SpotId));
+            parkingState.remove(spotToRemove);
+            response = "removing " + spotToRemove;
         }
+        return response;
     }
 
-    public void occupySpot(String AreaId, String SpotId) {
-        if (parkingState.get(AreaId.concat(SpotId).equals(true)))
-            System.out.println("Spot had already been occupied");
-        else {
-            parkingState.put(AreaId.concat(SpotId), true);
-            System.out.println("Spot has been occupied successfully");
+    public String occupySpot(String AreaId, String SpotId) {
+        String spotToOccupy = AreaId.concat(SpotId);
+        String response;
+        if (!parkingState.containsKey(spotToOccupy))
+            response = "Spot " + spotToOccupy + " has not been found";
+        else{
+            if (parkingState.get(spotToOccupy).equals(true))
+                response = "Spot had already been occupied";
+            else {
+                parkingState.put(spotToOccupy, true);
+                response = "Spot has been occupied successfully";
+            }
         }
+        return response;
     }
     // !!! Very wrong, Asphalt is not aware of how long does the car intend to occupy spot.
     // Time of occupation comes from parking machine
-    public void occupySpot(String AreaId, String SpotId, Long timeInSeconds) {
-        if (parkingState.get(AreaId.concat(SpotId)).equals(true))
-            System.out.println("Spot had already been occupied");
-        else {
-            parkingState.put(AreaId.concat(SpotId), true);
-            System.out.println("Spot has been occupied successfully");
-        }
-    }
+//    public void occupySpot(String AreaId, String SpotId, Long timeInSeconds) {
+//        if (parkingState.get(AreaId.concat(SpotId)).equals(true))
+//            System.out.println("Spot had already been occupied");
+//        else {
+//            parkingState.put(AreaId.concat(SpotId), true);
+//            System.out.println("Spot has been occupied successfully");
+//        }
+//    }
 
-    public void vacateSpot(String AreaId, String SpotId) {
-        if (parkingState.get(AreaId.concat(SpotId).equals(false)))
-            System.out.println("Spot had not been occupied");
+    public String vacateSpot(String AreaId, String SpotId) {
+        String spotToOccupy = AreaId.concat(SpotId);
+        String response;
+        if (!parkingState.containsKey(spotToOccupy))
+            response = "Spot " + spotToOccupy + " has not been found";
         else {
-            parkingState.put(AreaId.concat(SpotId), false);
-            System.out.println("Spot has become vacant successfully");
+            if (parkingState.get(AreaId.concat(SpotId)).equals(false))
+                response = "Spot had not been occupied";
+            else {
+                parkingState.put(AreaId.concat(SpotId), false);
+                response = "Spot has become vacant successfully";
+            }
         }
+        return response;
     }
 
     public static Parking getInstance() {

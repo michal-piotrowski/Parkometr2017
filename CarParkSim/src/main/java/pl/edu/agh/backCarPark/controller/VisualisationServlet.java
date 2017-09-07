@@ -1,6 +1,5 @@
 package pl.edu.agh.backCarPark.controller;
 
-import pl.edu.agh.backCarPark.model.Parking;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,14 +16,14 @@ import java.util.Map;
 @WebServlet("/carpark")
 public class VisualisationServlet extends HttpServlet{
 
-    private Parking model;
+//    private Parking model;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter pw = resp.getWriter();
-        model = Parking.getInstance();
-        for (Map.Entry<String, Boolean> entry: model.getEntries())
-            pw.write("<h1> " + entry.getKey() + ": " + (entry.getValue()?"occupied":"vacant") + "</h1>" );
+////        model = Parking.getInstance();
+//        for (Map.Entry<String, Boolean> entry: model.getEntries())
+//            pw.write("<h1> " + entry.getKey() + ": " + (entry.getValue()?"occupied":"vacant") + "</h1>" );
         pw.close();
     }
 }

@@ -1,27 +1,29 @@
 package pl.edu.agh.backCarPark.controller;
 
-import pl.edu.agh.backCarPark.model.Parking;
+import pl.edu.agh.backmainapp.webservice.NotifyMainModuleBean;
+import pl.edu.agh.backmainapp.webservice.NotifyMainModuleBeanService;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 /**
  * Created by Michał Piotrowski on 2017-08-21.
  */
 public class CLInterface {
-    private static Parking parking;
 
-    CLInterface() {
-        parking = Parking.getInstance();
+    private static NotifyMainModuleBeanService service;
+    private static NotifyMainModuleBean port;
+
+    static {
+        service = new NotifyMainModuleBeanService();
+        port = service.getNotifyMainModuleBeanPort();
     }
 
     public static void main(String[] args) {
         System.out.println("Welcome!");
-        String currentAction;
 
         try {
             while (true) {
-                if ((currentAction = Action.executeAction(Action.queryForAction())).equals("exit"))
+                if ((Action.executeAction(Action.queryForAction(), port)).equals("exit"))
                     break;
             }
             System.out.println("Press Enter to continue");
@@ -32,6 +34,5 @@ public class CLInterface {
             e.printStackTrace();
         }
     }
-
 
 }

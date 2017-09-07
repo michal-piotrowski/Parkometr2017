@@ -5,10 +5,14 @@ package pl.edu.agh.backMainApp.webService;
  */
 public interface NotifyMainModule {
 
-    public void notifyOccupySpot(String AreaId, String SpotId);
+    public String notifyOccupySpot(String AreaId, String SpotId);
 
-    public void notifyaddSpot(String AreaId, String SpotId);
+    public String notifyaddSpot(String AreaId, String SpotId);
 
-    public void notifyRemoveSpot(String AreaId, String SpotId);
+    public String notifyRemoveSpot(String AreaId, String SpotId);
+
+    public String notifyVacateSpot(String AreaId, String SpotId);
+
+    public String notifyPrintSpots();
 
 }

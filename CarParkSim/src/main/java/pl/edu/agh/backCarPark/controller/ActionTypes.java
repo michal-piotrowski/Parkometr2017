@@ -28,7 +28,7 @@ public class ActionTypes {
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(ADD_SPOT, "AreaID", "SpotID")));
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(REMOVE_SPOT, "AreaID", "SpotID")));
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(OCCUPY_SPOT, "AreaID", "SpotID")));
-        actionsAndArgs.add(new ArrayList<>(Arrays.asList(OCCUPY_SPOT, "AreaID", "SpotID", "TimeInSeconds")));
+//        actionsAndArgs.add(new ArrayList<>(Arrays.asList(OCCUPY_SPOT, "AreaID", "SpotID", "TimeInSeconds")));
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(VACATE_SPOT, "AreaID", "SpotID")));
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(PRINT_SPOTS)));
         actionsAndArgs.add(new ArrayList<>(Arrays.asList(EXIT)));

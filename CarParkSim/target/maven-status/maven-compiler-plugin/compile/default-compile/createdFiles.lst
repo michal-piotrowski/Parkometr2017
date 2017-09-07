@@ -2,8 +2,6 @@ pl\edu\agh\backCarPark\controller\CLInterface.class
 pl\edu\agh\backCarPark\controller\VisualisationServlet.class
 pl\edu\agh\backCarPark\model\Parking.class
 pl\edu\agh\backCarPark\webService\ParkingService.class
-pl\edu\agh\backCarPark\model\ParkingSpot.class
 pl\edu\agh\backCarPark\controller\Action$UserInputVerifResult.class
-pl\edu\agh\backCarPark\model\ParkingSpotImpl.class
 pl\edu\agh\backCarPark\controller\Action.class
 pl\edu\agh\backCarPark\controller\ActionTypes.class
