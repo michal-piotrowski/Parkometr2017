@@ -1,0 +1,23 @@
+#topPanel {
+    width: 100%;
+}
+
+#mainHeader {
+    position:relative;
+    left:20px;
+    float:left;
+    width:50%;
+}
+
+#loginPanel {
+    width:50%;
+    position:relative;
+    left:30%;
+    float: right;
+    padding-top: 20px;
+}
+
+#areasList {
+    position:fixed;
+    top: 100px;
+}

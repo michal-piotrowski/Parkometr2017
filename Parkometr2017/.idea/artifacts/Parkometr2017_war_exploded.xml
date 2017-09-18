@@ -6,6 +6,15 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Parkometr2017" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="EJB-1.0.jar">
+            <element id="module-output" name="EJB" />
+          </element>
+          <element id="library" level="project" name="Maven: javax.ejb:ejb-api:3.0" />
+          <element id="library" level="project" name="Maven: javax.ejb:javax.ejb-api:3.2" />
+          <element id="library" level="project" name="Maven: javax.transaction:javax.transaction-api:1.2" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Parkometr2017-1.0/META-INF/MANIFEST.MF" />

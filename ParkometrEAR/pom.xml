@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>pl.edu.agh</groupId>
+    <artifactId>ParkometrEAR</artifactId>
+    <version>1.0</version>
+    <packaging>ear</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <configuration>
+                    <version>1.4</version>
+                    <modules>
+                        <webModule>
+                            <groupId>pl.edu.agh</groupId>
+                            <artifactId>Parkometr2017</artifactId>
+                        </webModule>
+                        <ejbModule>
+                            <groupId>pl.edu.agh</groupId>
+                            <artifactId>EJB</artifactId>
+                        </ejbModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <artifactId>EJB</artifactId>
+            <groupId>pl.edu.agh</groupId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+</project>

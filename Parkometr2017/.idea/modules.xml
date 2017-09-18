@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../CarParkSim/CarParkSim.iml" filepath="$PROJECT_DIR$/../CarParkSim/CarParkSim.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Parkometr2017.iml" filepath="$PROJECT_DIR$/Parkometr2017.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Parkometr2017Components/Components.iml" filepath="$PROJECT_DIR$/../Parkometr2017Components/Components.iml" group="Components and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../EJB/EJB.iml" filepath="$PROJECT_DIR$/../EJB/EJB.iml" group="Components and modules" />
+      <module fileurl="file://$PROJECT_DIR$/Parkometr2017.iml" filepath="$PROJECT_DIR$/Parkometr2017.iml" group="Components and modules" />
     </modules>
   </component>
 </project>

@@ -4,6 +4,10 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/../EJB" />
+    <file type="ejb" url="file://$PROJECT_DIR$/EJB" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/../ParkometrEAR" />
     <file type="web" url="file://$PROJECT_DIR$/../CarParkSim" />
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
@@ -12,6 +16,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../CarParkSim/pom.xml" />
+        <option value="$PROJECT_DIR$/../EJB/pom.xml" />
+        <option value="$PROJECT_DIR$/../Parkometr2017Components/pom.xml" />
+        <option value="$PROJECT_DIR$/ParkometrEAR/pom.xml" />
       </list>
     </option>
   </component>

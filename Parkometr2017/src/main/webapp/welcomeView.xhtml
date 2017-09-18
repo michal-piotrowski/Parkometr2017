@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/jsp/jstl/core" xml:lang="en" lang="en"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/rootTemplate.xhtml">
+    <div id="bodyComp">
+    <ui:define name="userPanel">
+        <ui:include src="userPanel.xhtml"></ui:include>
+    </ui:define>
+
+    <ui:define name="dashboard">
+        <div id="areasList">
+            <p>Parking Areas:</p>
+            <h:dataTable var="_spot" value="#{notifyMainModuleBean.entries}"
+                         rendered="#{not empty notifyMainModuleBean.entries}"
+                         styleClass="simpletablestyle">
+                <h:column>
+                    <f:facet name="header">Spot ID</f:facet>
+                    #{_spot.areaId}
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Is Occupied</f:facet>
+                    #{_spot.spotId}
+                </h:column>
+            </h:dataTable>
+        </div>
+    </ui:define>
+    </div>
+</ui:composition>
