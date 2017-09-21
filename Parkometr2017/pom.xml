@@ -6,6 +6,7 @@
 
     <groupId>pl.edu.agh</groupId>
     <artifactId>Parkometr2017</artifactId>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <name>Parkometr2017</name>
@@ -45,8 +46,28 @@
             <groupId>pl.edu.agh</groupId>
             <version>1.0</version>
         </dependency>
-        <dependency>
 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.4.Final</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.2.11.FINAL</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>5.2.11.Final</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jsp-api</artifactId>
             <version>2.0</version>

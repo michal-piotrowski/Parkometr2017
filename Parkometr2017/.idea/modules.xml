@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/../Parkometr2017Components/Components.iml" filepath="$PROJECT_DIR$/../Parkometr2017Components/Components.iml" group="Components and modules" />
       <module fileurl="file://$PROJECT_DIR$/../EJB/EJB.iml" filepath="$PROJECT_DIR$/../EJB/EJB.iml" group="Components and modules" />
       <module fileurl="file://$PROJECT_DIR$/Parkometr2017.iml" filepath="$PROJECT_DIR$/Parkometr2017.iml" group="Components and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../modulPowiadomien/modulPowiadomien.iml" filepath="$PROJECT_DIR$/../modulPowiadomien/modulPowiadomien.iml" group="Components and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../samParkometr/samParkometr.iml" filepath="$PROJECT_DIR$/../samParkometr/samParkometr.iml" group="Components and modules" />
     </modules>
   </component>
 </project>

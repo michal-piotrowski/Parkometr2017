@@ -1,6 +1,7 @@
 package ejb.interfaces;
 
 import javax.ejb.Local;
+import javax.ejb.SessionContext;
 
 /**
  * Created by Michał Piotrowski on 2017-09-17.
@@ -14,5 +15,7 @@ public interface UserService {
      */
     String logUserIn();
 
-    String logUserOut();
+    void logUserOut();
+
+    public SessionContext getSessionContext();
 }

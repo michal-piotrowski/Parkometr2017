@@ -23,7 +23,11 @@ public interface ParkingService {
 
     String printSpots();
 
+    List<String> getDistinctAreas();
+
     List<ParkingSpot> getEntries();
+
+    List<ParkingSpot> getEntriesFor(String areaId);
 
 
 }

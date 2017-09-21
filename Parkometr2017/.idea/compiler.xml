@@ -24,15 +24,19 @@
         <processorPath useClasspath="true" />
         <module name="CarParkSim" />
         <module name="EJB" />
+        <module name="modulPowiadomien" />
         <module name="Parkometr2017" />
+        <module name="samParkometr" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="CarParkSim" target="1.8" />
       <module name="Components" target="1.5" />
       <module name="EJB" target="1.8" />
+      <module name="modulPowiadomien" target="1.5" />
       <module name="Parkometr2017" target="1.8" />
       <module name="ParkometrEAR" target="1.5" />
+      <module name="samParkometr" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

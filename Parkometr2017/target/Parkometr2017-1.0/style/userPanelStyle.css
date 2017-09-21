@@ -2,22 +2,49 @@
     width: 100%;
 }
 
+body {
+    font-family: Arial;
+}
+
 #mainHeader {
-    position:relative;
-    left:20px;
-    float:left;
-    width:50%;
+    position: relative;
+    left: 20px;
+    float: left;
+    width: 50%;
+    padding-bottom: 50px;
 }
 
 #loginPanel {
-    width:50%;
-    position:relative;
-    left:30%;
+    width: 50%;
+    position: relative;
+    left: 20%;
     float: right;
     padding-top: 20px;
 }
 
 #areasList {
-    position:fixed;
+    position: fixed;
     top: 100px;
+    vertical-align: middle;
+}
+
+.area {
+    border: solid greenyellow 2px;
+    float: left;
+    width: auto;
+}
+.simpletablestyle {
+    width:100%;
+}
+
+td {
+    background-color: #DEFFAC;
+    padding: 3px;
+    margin: 2px;
+    text-align: center;
+}
+
+h2 {
+    padding:20px;
+    text-align: center;
 }

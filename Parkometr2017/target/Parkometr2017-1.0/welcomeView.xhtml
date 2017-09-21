@@ -5,27 +5,33 @@
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 template="/rootTemplate.xhtml">
     <div id="bodyComp">
-    <ui:define name="userPanel">
-        <ui:include src="userPanel.xhtml"></ui:include>
-    </ui:define>
+        <ui:define name="userPanel">
+            <ui:include src="userPanel.xhtml"></ui:include>
+        </ui:define>
 
-    <ui:define name="dashboard">
-        <div id="areasList">
-            <p>Parking Areas:</p>
-            <h:dataTable var="_spot" value="#{notifyMainModuleBean.entries}"
-                         rendered="#{not empty notifyMainModuleBean.entries}"
-                         styleClass="simpletablestyle">
-                <h:column>
-                    <f:facet name="header">Spot ID</f:facet>
-                    #{_spot.areaId}
+        <ui:define name="mainContent">
+            <h1>Parking Areas:</h1>
 
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Is Occupied</f:facet>
-                    #{_spot.spotId}
-                </h:column>
-            </h:dataTable>
-        </div>
-    </ui:define>
+            <c:forEach var="_area" items="#{notifyMainModuleBean.distinctAreas}">
+                <c:set var="divId" value="areasList_#{_area}"/>
+
+                <h:panelGroup rendered="#{user.userRole eq 'Manager' or user.ownedArea eq _area}"
+                              id="#{divId}" class="area">
+                    <h2>Area: #{_area}</h2>
+                    <h:dataTable var="_spot" value="#{notifyMainModuleBean.getEntriesFor(_area)}"
+                                 styleClass="simpletablestyle">
+                        <h:column>
+                            <f:facet name="header">Spot ID</f:facet>
+                            <h:outputFormat value="#{_spot.spotId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Is Occupied</f:facet>
+                            <h:outputFormat value="#{_spot.occupied}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+            </c:forEach>
+
+        </ui:define>
     </div>
 </ui:composition>

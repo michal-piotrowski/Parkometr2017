@@ -9,7 +9,9 @@
     <file type="javaeeApplication" url="file://$PROJECT_DIR$" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/../ParkometrEAR" />
     <file type="web" url="file://$PROJECT_DIR$/../CarParkSim" />
+    <file type="web" url="file://$PROJECT_DIR$/../modulPowiadomien" />
     <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../samParkometr" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -19,6 +21,8 @@
         <option value="$PROJECT_DIR$/../EJB/pom.xml" />
         <option value="$PROJECT_DIR$/../Parkometr2017Components/pom.xml" />
         <option value="$PROJECT_DIR$/ParkometrEAR/pom.xml" />
+        <option value="$PROJECT_DIR$/../modulPowiadomien/pom.xml" />
+        <option value="$PROJECT_DIR$/../samParkometr/pom.xml" />
       </list>
     </option>
   </component>

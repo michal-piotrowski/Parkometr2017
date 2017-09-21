@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Maven: org.hibernate:hibernate-entitymanager:5.2.11.FINAL">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.FINAL/hibernate-entitymanager-5.2.11.FINAL-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/5.2.11.Final/hibernate-entitymanager-5.2.11.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

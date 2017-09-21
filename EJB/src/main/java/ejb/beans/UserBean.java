@@ -7,6 +7,7 @@ import javax.ejb.SessionContext;
 import javax.ejb.Startup;
 import javax.ejb.Stateful;
 import javax.ejb.Stateless;
+import javax.faces.context.FacesContext;
 import java.security.Principal;
 
 /**
@@ -29,8 +30,32 @@ public class UserBean implements UserService {
     }
 
     @Override
-    public String logUserOut() {
-        Principal userPrincipal = sessionContext.getCallerPrincipal();
-        return userPrincipal.getName();
+    public void logUserOut() {
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+    }
+
+
+    public SessionContext getSessionContext() {
+        return sessionContext;
+    }
+
+    public void setSessionContext(SessionContext sessionContext) {
+        this.sessionContext = sessionContext;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

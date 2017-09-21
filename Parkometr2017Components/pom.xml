@@ -12,5 +12,7 @@
     <modules>
         <module>../EJB</module>
         <module>../Parkometr2017</module>
+        <module>../modulPowiadomien</module>
+        <module>../samParkometr</module>
     </modules>
 </project>

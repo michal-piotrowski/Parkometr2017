@@ -1,5 +1,5 @@
-ejb\interfaces\beans\ParkingBean.class
 ejb\interfaces\UserService.class
 ejb\ParkingSpot.class
-ejb\interfaces\beans\UserBean.class
 ejb\interfaces\ParkingService.class
+ejb\beans\ParkingBean.class
+ejb\beans\UserBean.class

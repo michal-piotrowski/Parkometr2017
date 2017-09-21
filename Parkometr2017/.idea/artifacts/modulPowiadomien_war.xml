@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="modulPowiadomien:war">
+    <output-path>$PROJECT_DIR$/../modulPowiadomien/target</output-path>
+    <root id="archive" name="modulPowiadomien-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="modulPowiadomien:war exploded" />
+    </root>
+  </artifact>
+</component>

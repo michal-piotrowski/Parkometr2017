@@ -1,0 +1,37 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                template="/rootTemplate.xhtml"
+>
+    <div id="bodyComp">
+        <ui:define name="userPanel">
+            <ui:include src="userPanel.xhtml"/>
+        </ui:define>
+        <ui:define name="mainContent">
+
+            <h:panelGroup class="area">
+
+                    <h:dataTable var="userName" value="#{user.allUserNames}"
+                                 styleClass="simpletablestyle">
+                        <h:column>
+                            <f:facet name="header">User Name</f:facet>
+                            <h:outputFormat value="#{userName}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Remove</f:facet>
+                            <h:form>
+                            <h:commandButton rendered="#{user.getUserRoleFor(userName) ne 'Manager'}"
+                                             type="submit" value="Remove" action="#{user.removeUser(userName)}"/>
+                            </h:form>
+                        </h:column>
+                    </h:dataTable>
+
+
+            </h:panelGroup>
+        </ui:define>
+    </div>
+
+
+</ui:composition>

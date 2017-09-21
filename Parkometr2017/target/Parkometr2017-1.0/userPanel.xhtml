@@ -3,20 +3,23 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:ui="http://java.sun.com/jsf/facelets">
-    <head>
-        <link rel="stylesheet" href="style/userPanelStyle.css"/>
-    </head>
     <body>
     <div id="topPanel">
         <div id="mainHeader">
             <a href="welcomeView.xhtml"><h1>Parkometr 2017</h1></a>
         </div>
         <div id="loginPanel">
-            <div id="loggedAs">You're logged in as: #{user.userName}</div>
+            <div id="loggedAs">
+                <p>You're logged in as: #{user.userName} with role: #{user.userRole}</p>
+                <p>You're responsible for area: #{user.ownedArea}</p>
+            </div>
             <div id="logoutForm">
                 <h:form>
-                    <h:commandButton type="submit" value="Logout" action="#{user.logUserOut}"></h:commandButton>
-                    <h:commandButton type="submit" value="Add mock user" action="#{user.addMockUser}"></h:commandButton>
+                    <h:commandButton type="submit" value="Logout" action="#{user.logUserOut}"/>
+                    <h:commandButton type="submit" value="Add mock user" action="#{user.addMockUser}"/>
+                    <h:commandButton rendered="#{user.userRole eq 'Manager'}"
+                                     type="submit" value="Accounts Management" action="AccountsManagement"/>
+
                 </h:form>
 
             </div>

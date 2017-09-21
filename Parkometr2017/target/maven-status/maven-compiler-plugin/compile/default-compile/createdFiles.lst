@@ -1,3 +1,4 @@
 pl\edu\agh\backMainApp\webService\NotifyMainModuleBean.class
 pl\edu\agh\backMainApp\model\User.class
+pl\edu\agh\backMainApp\database\UserDAO.class
 pl\edu\agh\backMainApp\webService\NotifyMainModule.class

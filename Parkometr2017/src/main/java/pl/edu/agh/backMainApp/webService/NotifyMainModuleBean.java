@@ -21,7 +21,8 @@ public class NotifyMainModuleBean implements NotifyMainModule {
     private ParkingService parkingService;
 
 
-    public NotifyMainModuleBean() {}
+    public NotifyMainModuleBean() {
+    }
 
     @WebMethod
     public String notifyOccupySpot(@WebParam(name = "AreaId") String AreaId, @WebParam(name = "SpotId") String SpotId) {
@@ -49,9 +50,7 @@ public class NotifyMainModuleBean implements NotifyMainModule {
         return parkingService.printSpots();
     }
 
-    public List<ParkingSpot> getEntries() {
-        return parkingService.getEntries();
-    }
+    public List<ParkingSpot> getEntries() { return parkingService.getEntries(); }
 
     @WebMethod
     public ParkingSpot getEntry(@WebParam String composedSpotID) {
@@ -60,4 +59,8 @@ public class NotifyMainModuleBean implements NotifyMainModule {
                 return s;
         return null;
     }
+
+    public List<ParkingSpot> getEntriesFor(String areaId) { return parkingService.getEntriesFor(areaId); }
+
+    public List<String> getDistinctAreas() { return parkingService.getDistinctAreas(); }
 }
